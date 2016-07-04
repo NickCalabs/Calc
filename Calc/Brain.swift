@@ -10,13 +10,28 @@ import Foundation
 
 class Brain {
     
-    func setOperand(operand: Double) { }
+    private var accumulator = 0.0
     
-    func performOperaion(symbol: String) { }
+    func setOperand(operand: Double) {
+        accumulator = operand
+    }
+    
+    var operations: Dictionary<String, Double> = [
+        "π": M_PI,
+        "e": M_E
+    ]
+    
+    func performOperaion(symbol: String) {
+        switch symbol {
+        case "π": accumulator = M_PI
+        case "√": sqrt(accumulator)
+        default: break
+        }
+    }
     
     var result: Double {
         get {
-            return 0.0
+            return accumulator
         }
     }
 }

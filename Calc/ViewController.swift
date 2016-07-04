@@ -34,15 +34,16 @@ class ViewController: UIViewController {
         }
     }
     
+    private var brain = Brain() //free initializer 
+    
     @IBAction private func performOperation(sender: UIButton) {
-        userIsTyping = false
-        if let mathematicalSymbol = sender.currentTitle {
-            if mathematicalSymbol == "π" {
-                displayValue = M_PI
-                //display.text = "\(M_PI)" //replaced with computed var displayValue
-            } else if mathematicalSymbol == "√" {
-                displayValue = sqrt(displayValue)
-            }
+        if userIsTyping == false {
+            brain.setOperand(displayValue)
+            userIsTyping = false
         }
+        if let mathematicalSymbol = sender.currentTitle {
+            brain.performOperaion(mathematicalSymbol)
+        }
+        displayValue = brain.result
     }
 }
