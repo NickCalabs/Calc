@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private var brain = Brain() //free initializer 
+    private var brain = Brain() //free initializer
     
     @IBAction private func performOperation(sender: UIButton) {
         if userIsTyping == false {
