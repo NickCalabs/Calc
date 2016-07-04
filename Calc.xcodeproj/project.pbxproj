@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		018E9E1D1D297C3300E804E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E9E1C1D297C3300E804E2 /* AppDelegate.swift */; };
 		018E9E1F1D297C3300E804E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E9E1E1D297C3300E804E2 /* ViewController.swift */; };
-		018E9E221D297C3300E804E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018E9E201D297C3300E804E2 /* Main.storyboard */; };
 		018E9E241D297C3300E804E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018E9E231D297C3300E804E2 /* Assets.xcassets */; };
 		018E9E271D297C3300E804E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018E9E251D297C3300E804E2 /* LaunchScreen.storyboard */; };
 		018E9E321D297C3300E804E2 /* CalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E9E311D297C3300E804E2 /* CalcTests.swift */; };
 		018E9E3D1D297C3300E804E2 /* CalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E9E3C1D297C3300E804E2 /* CalcUITests.swift */; };
+		018E9E4B1D29AF4200E804E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 018E9E4A1D29AF4200E804E2 /* Main.storyboard */; };
+		018E9E4D1D29DFB700E804E2 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018E9E4C1D29DFB700E804E2 /* Brain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 		018E9E191D297C3300E804E2 /* Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018E9E1C1D297C3300E804E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		018E9E1E1D297C3300E804E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		018E9E211D297C3300E804E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		018E9E231D297C3300E804E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		018E9E261D297C3300E804E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		018E9E281D297C3300E804E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		018E9E381D297C3300E804E2 /* CalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		018E9E3C1D297C3300E804E2 /* CalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcUITests.swift; sourceTree = "<group>"; };
 		018E9E3E1D297C3300E804E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		018E9E4A1D29AF4200E804E2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		018E9E4C1D29DFB700E804E2 /* Brain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,8 @@
 			children = (
 				018E9E1C1D297C3300E804E2 /* AppDelegate.swift */,
 				018E9E1E1D297C3300E804E2 /* ViewController.swift */,
-				018E9E201D297C3300E804E2 /* Main.storyboard */,
+				018E9E4A1D29AF4200E804E2 /* Main.storyboard */,
+				018E9E4C1D29DFB700E804E2 /* Brain.swift */,
 				018E9E231D297C3300E804E2 /* Assets.xcassets */,
 				018E9E251D297C3300E804E2 /* LaunchScreen.storyboard */,
 				018E9E281D297C3300E804E2 /* Info.plist */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					018E9E181D297C3300E804E2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5VQ7N8ZHU4;
 					};
 					018E9E2C1D297C3300E804E2 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -231,7 +235,7 @@
 			files = (
 				018E9E271D297C3300E804E2 /* LaunchScreen.storyboard in Resources */,
 				018E9E241D297C3300E804E2 /* Assets.xcassets in Resources */,
-				018E9E221D297C3300E804E2 /* Main.storyboard in Resources */,
+				018E9E4B1D29AF4200E804E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				018E9E1F1D297C3300E804E2 /* ViewController.swift in Sources */,
+				018E9E4D1D29DFB700E804E2 /* Brain.swift in Sources */,
 				018E9E1D1D297C3300E804E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +298,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		018E9E201D297C3300E804E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				018E9E211D297C3300E804E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		018E9E251D297C3300E804E2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -401,10 +398,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickcalabro.Calc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +412,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Calc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickcalabro.Calc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
