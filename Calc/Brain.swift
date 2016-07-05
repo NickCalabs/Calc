@@ -20,7 +20,7 @@ class Brain {
         accumulator = operand
     }
     
-    var operations: Dictionary<String, Operation> = [
+    private var operations: Dictionary<String, Operation> = [
         "π": Operation.Constant(M_PI),
         "e": Operation.Constant(M_E),
         "√": Operation.UnaryOperation(sqrt),
@@ -29,13 +29,13 @@ class Brain {
         "×": Operation.BinaryOperation({ (op1: Double, op2: Double) -> Double in
             return op1 * op2
         }),
-        "÷": Operation.BinaryOperation(divide),
-        "+": Operation.BinaryOperation(add),
-        "−": Operation.BinaryOperation(sub),
+        "÷": Operation.BinaryOperation({ (op1, op2) in return op1 / op2 }),
+        "+": Operation.BinaryOperation({ return $0 + $1 }),
+        "−": Operation.BinaryOperation({$0 - $1}),
         "=": Operation.Equals
     ]
     
-    enum Operation {
+    private enum Operation {
         case Constant(Double)
         case UnaryOperation((Double) -> Double)
         case BinaryOperation((Double, Double) -> Double)
@@ -63,7 +63,7 @@ class Brain {
     
     private var pending: PendingBinaryOperationInfo?
     
-    struct PendingBinaryOperationInfo {
+    private struct PendingBinaryOperationInfo {
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double
     }
